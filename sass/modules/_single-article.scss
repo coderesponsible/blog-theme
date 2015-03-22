@@ -1,0 +1,192 @@
+.single-article{
+	float:left;
+	width:70%;
+	@include rem("padding-bottom", 20);
+	border-bottom:1px dotted $lightGrey;
+	@include clearfix();
+
+	// Max Width Breakpoint
+	@include breakpoint($maxWidth){
+		@include rem("padding", 0, 10);
+	}
+
+	// Tablet Breakpoint
+	@include breakpoint($tablet){
+		width:100%;
+		@include rem("margin-bottom", 20);
+	}
+
+	p{
+		@include rem("margin-bottom", 20);
+	}
+	
+	h1{
+		font-family:$webfont;
+		@include rem("font-size", 28);
+		@include rem("margin", 10, 0, 20, 0);
+	}
+
+	h2{
+		font-family:$webfont;
+		@include rem("font-size", 24);
+		@include rem("margin", 10, 0, 20, 0);
+	}
+
+	h3{
+		font-family:$webfont;
+		@include rem("font-size", 22);
+		@include rem("margin", 20, 0, 20, 0);
+	}
+
+	span.author-name{
+		@include rem("margin-top", 5);
+		a{
+			color:$darkGrey;
+			text-decoration:none;
+			font-weight:bold;
+		}
+		a:hover, a:focus{
+			color:$crRed;
+		}
+	}
+
+	div.top-right{
+		p{
+			font-family:$webfont;
+			@include rem("font-size", 14);
+		}
+	}
+
+	div.social-article{
+		float:right;
+	}
+
+	ul.article-items{
+		clear:both;
+		@include rem("margin", 30, 0);
+		list-style:none;
+
+		li{
+			display:inline-block;
+			@include rem("margin", 0, 20, 0, 0);
+
+			@include breakpoint($inbetween){
+				@include rem("margin", 0, 10, 0, 0);
+			}
+
+			// Mobile breakpoint
+			@include breakpoint($mobile){
+				@include rem("margin", 0, 5, 0, 0);
+			}
+
+			a{
+				text-decoration:none;
+				color:$darkGrey;
+			}
+
+			a:hover, a:focus{
+				color:$crRed;
+			}
+
+			span{
+				background:url(images/icons.png) no-repeat;
+				@include retina("images/icons-hd.png", 74, 37);
+				background-position:0 0;
+				display:block;
+				@include rem("width", 19);
+				@include rem("height", 18);
+				@include rem("margin", 0, 10, 0, 0);
+				float:left;
+
+				// Mobile breakpoint
+				@include breakpoint($mobile){
+					@include rem("margin", 0, 5, 0, 0);
+				}
+			}
+		}
+		li.date{
+			span{
+				@include rem("background-position", -55, 0);
+			}
+		}
+		li.category{
+			span{
+				@include rem("background-position", -27, 0);
+			}
+		}
+		li.category{
+			a:hover, focus{
+				span{
+					@include rem("background-position", -27, -20);
+				}
+			}
+		}
+		li.comments{
+			span{
+				@include rem("background-position", 0, 0);
+			}
+		}
+		li.comments{
+			a:hover, focus{
+				span{
+					@include rem("background-position", 0, -20.99);
+				}
+			}
+		}
+	}
+
+	div.content{
+		font-family:$helvetica;
+		@include rem("font-size", 14);
+		@include rem("line-height", 22);
+
+		h3{
+			@include rem("margin", 30, 0, 0, 0);
+			padding:0;
+		}
+		img{
+			@include rem("padding", 5);
+			border:1px solid $lightGrey;
+
+			// Tablet Breakpoint
+			@include breakpoint($tablet){
+				max-width:90%;
+				height:auto;
+			}
+		}
+
+		ul, ol{
+			@include rem("margin", 0, 0, 20, 20);
+		}
+
+		.alignleft{
+			float:left;
+			@include rem("margin", 0, 10, 10, 0);
+		}
+		.alignright{
+			float:right;
+			@include rem("margin", 0, 0, 10, 10);
+		}
+
+		pre, .codecolorer-container{
+			clear:both;
+			border:1px solid $reallyLightGrey;
+			@include rem("padding", 10);
+			@include rem("margin-top", 30);
+		}
+		.codecolorer-container{
+			width:100% !important;
+			@include rem("margin-bottom", 30);
+		}
+		a.button{
+			color:white;
+			background:$crRed;
+			text-decoration:none;
+			@include rem("margin", 5, 10);
+			@include rem("padding", 10);
+		}
+		a.button:hover, a.button:focus{
+			background:$darkRed;
+		}
+	}
+}

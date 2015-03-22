@@ -1,0 +1,36 @@
+#sidebar{
+	@include rem("padding", 0, 10, 20, 20);
+	width:30%;
+
+	// Breakpoint for Tablet
+	@include breakpoint($tablet){
+		clear:both;
+		float:left;
+		width:100%;
+
+		div.split{
+			width:50%;
+			float:left;
+		}
+	}
+	// Breakpoint for mobile
+	@include breakpoint($mobile){
+		@include rem("padding-left", 10);
+		div.split{
+			width:100%;
+		}
+	}
+
+	ul.social-icons{
+		@include rem("margin-top", 20);
+		@include rem("margin-bottom", 20);
+	}
+
+	h3{
+		@include rem("font-size", 18);
+		@include rem("margin-top", 40);
+	}
+	h3:first-child{
+		margin-top:0;
+	}
+}

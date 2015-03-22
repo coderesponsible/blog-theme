@@ -1,0 +1,75 @@
+div.author{
+	border-top:1px dotted $lightGrey;
+	border-bottom:1px dotted $lightGrey;
+	@include rem("padding", 20, 0);
+	@include rem("margin", 20, 0);
+
+	div.left{
+		float:left;
+		@include rem("width", 120);
+		text-align:center;
+
+		p{
+			padding:0;
+			@include rem("margin", 2, 0);
+		}
+
+		p.num-posts{
+			font-weight:bold;
+		}
+
+		a{
+			text-decoration:none;
+			color:$darkGrey;
+		}
+		a:hover, a:focus{
+			color:$crRed;
+		}
+		img{
+			@include rem("width", 90);
+			@include rem("height", 90);
+			@include roundedCorners(90);
+			@include rem("padding", 5);
+			border:1px solid $lightGrey;
+		}
+	}
+
+	div.right{
+		float:left;
+		@include rem("margin", 10);
+		width:80%;
+		@include rem("line-height", 16);
+
+		// Tablet Breakpoint
+		@include breakpoint($tablet){
+			width:60%;
+		}
+
+		// Tablet Mobile
+		@include breakpoint($mobile){
+			width:50%;
+		}
+
+		h3{
+			@include rem("line-height", 22);
+			@include rem("margin", 0, 0, 10, 0);
+			padding:0;
+
+			a{
+				color:$darkGrey;
+				text-decoration:none;
+			}
+
+			a:hover, a:focus{
+				color:$crRed;
+			}
+		}
+		a{
+			color:$darkGrey;
+		}
+		a:hover, a:focus{
+			color:$crRed;
+			text-decoration:none;
+		}
+	}
+}

@@ -1,0 +1,23 @@
+ul.paging{
+	@include rem("margin", 0, 0, 20, 0);
+	float:right;
+	li{
+		display:inline;
+		@include rem("margin", 0, 0, 0, 10);
+		a{
+			@include rem("padding", 5, 10);
+			background:$crRed;
+			color:white;
+			text-decoration:none;
+		}
+		a:hover, a:focus{
+			background:$darkRed;
+		}
+	}
+	li.current{
+		a{
+			background:$darkRed;
+			color:white;
+		}
+	}
+}

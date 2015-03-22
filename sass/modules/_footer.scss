@@ -1,0 +1,91 @@
+footer{
+	clear:both;
+	background:$darkGrey;
+	width:100%;
+	@include rem("height", 300);
+	@include rem("margin", 30, 0, 0, 0);
+	@include rem("padding", 30, 0, 0, 0);
+	color:white;
+
+	// Breakpoint tablet
+	@include breakpoint($tablet){
+		@include rem("height", 440);
+		@include rem("padding", 20, 10);
+	}
+
+
+	.block{
+		@include rem("padding-right", 10);
+
+		// Breakpoint tablet
+		@include breakpoint($tablet){
+			width:100%;
+			float:left;
+			@include rem("margin-bottom", 20);
+
+			ul.social-icons{
+				display:none;
+			}
+		}
+
+		h3{
+			@include rem("font-size", 18);
+			font-family:$webfont;
+		}
+
+		h4{
+			@include rem("margin-left", 30);
+			a{
+				display:block;
+				@include hide-text();
+				background:url(images/cr-logo-footer.png) no-repeat;
+				@include retina("images/cr-logo-footer-hd.png", 150, 61);
+				@include rem("width", 150);
+				@include rem("height", 61);
+			}
+			
+			// Breakpoint tablet
+			@include breakpoint($tablet){
+				margin-left:0;
+			}
+
+		}
+	}
+
+	ul.recent-posts{
+		li{
+			border-bottom:1px dotted white;
+
+			a{
+				color:white;
+			}
+			a:hover, a:focus{
+				background:$crRed;
+			}
+		}
+		li:first-child{
+			border-top:1px dotted white;
+		}
+	}
+
+	ul.social-icons{
+		a:hover, a:focus{
+			background:$crRed;
+		}
+		a.twitter:hover, a.twitter:focus{
+			span{
+				@include rem("background-position", -61, -35);
+			}
+		}
+		a.facebook:hover, a.facebook:focus{
+			span{
+				@include rem("background-position", -32, -35);
+			}
+		}
+		a.rss:hover, a.rss:focus{
+			span{
+				@include rem("background-position", 0, -35);
+			}
+		}
+	}
+}

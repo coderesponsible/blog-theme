@@ -1,0 +1,42 @@
+ul.social-icons{
+	@include rem("margin", 10, 0);
+
+	li{
+		display:inline;
+		@include rem("margin", 10);
+		
+		
+		a{
+			display:inline-block;
+			background:$crRed;
+			@include rem("padding", 13);
+			@include roundedCorners(30);
+			
+			span{
+				background:url(images/social-icons.png) no-repeat;
+				@include retina("images/social-icons-hd.png", 90, 60);
+				@include rem("width", 30);
+				@include rem("height", 30);
+				@include hide-text();
+			}
+		}
+		a.twitter{
+			span{
+				@include rem("background-position", -61, 0);
+			}
+		}
+		a.facebook{
+			span{
+				@include rem("background-position", -32, 0);
+			}
+		}
+		a.rss{
+			span{
+				@include rem("background-position", 0, 0);
+			}
+		}
+		a:hover, a:focus{
+			background:$darkRed;
+		}
+	}
+}

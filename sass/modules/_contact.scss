@@ -1,0 +1,53 @@
+form#contact-form{
+	width:50%;
+
+	@include breakpoint($tablet){
+		width:100%;
+		@include rem("margin-bottom", 30);
+	}
+
+	legend{
+		@include hide-text();
+	}
+	label{
+		display:block;
+		clear:both;
+		@include rem("margin", 0, 0, 5, 0);
+		font-weight:bold;
+	}
+	input{
+		@include rem("padding", 5, 10);
+		@include rem("margin", 0, 0, 20, 0);
+		width:100%;
+		@include linearGradient(white, $reallyLightGrey);
+		border:1px solid $lightGrey;
+		color:$darkGrey;
+	}
+	textarea{
+		@include rem("padding", 5, 10);
+		width:100%;
+		@include rem("height", 100);
+		@include linearGradient(white, $reallyLightGrey);
+		border:1px solid $lightGrey;
+		color:$darkGrey;
+	}
+
+	button{
+		width:20%;
+		@include rem("padding", 10);
+		@include rem("margin", 10, 0, 0, 0);
+		float:right;
+		border:none;
+		cursor:pointer;
+		background:$crRed;
+		color:white;
+		
+		// Tablet Breakpoint
+		@include breakpoint($tablet){
+			width:40%;
+		}
+	}
+	button:hover, button:focus{
+		background:$darkRed;
+	}
+}

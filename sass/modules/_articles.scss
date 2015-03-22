@@ -1,0 +1,174 @@
+section.articles{
+	float:left;
+	width:70%;
+
+	// Max Width Breakpoint
+	@include breakpoint($maxWidth){
+		@include rem("padding", 0, 10);
+	}
+
+	// Tablet Breakpoint
+	@include breakpoint($tablet){
+		width:100%;
+	}
+
+	// Breakpoint in-between
+	@include breakpoint(600){
+		@include rem("margin-top", 30);
+	}
+
+	h2{
+		@include rem("margin-bottom", 20);
+	}
+
+	article{
+		clear:both;
+		position:relative;
+		@include rem("padding", 0, 0, 20, 0);
+		@include rem("margin", 0, 0, 20, 0);
+		border-bottom:1px dotted $lightGrey;
+		@include rem("line-height", 20);
+
+		// Breakpoint mobile
+		@include breakpoint($mobile){
+			@include rem("padding", 0, 0, 60, 0);
+		}
+
+		a.article-cat{
+			position:absolute;
+			top:0;
+			left:0;
+			z-index:10;
+			@include rem("margin", 5, 0, 0, 0);
+			@include rem("padding", 5, 10);
+			background:$crRed;
+			color:white;
+			font-weight:bold;
+			text-decoration:none;
+
+			span.cat-tri{
+				border-top: 30px solid $crRed; 
+				border-right: 30px solid transparent;
+				position:absolute;
+				top:0;
+				@include rem("margin", 0, 0, 0, 10);
+			}
+
+			// Breakpoint for Mobile
+			@include breakpoint(600){
+				display:none;
+			}
+		}
+		a.article-cat:hover, a.article-cat:focus{
+			background:$darkRed;
+
+			span.cat-tri{
+				border-top: 30px solid $darkRed; 
+			}
+		}
+
+		img{
+			@include rem("min-height", 180);
+			@include rem("min-width", 180);
+			width:100%;
+
+			// Breakpoint for Mobile
+			@include breakpoint($mobile){
+				display:none;
+				//width:80%;
+				//@include rem("min-height", 140);
+				//@include rem("min-width", 140);
+			}
+		}
+
+		div.article-content{
+			@include rem("padding", 0, 20, 0, 30);
+			@include rem("font-size", 14);
+			width:70%;
+
+			// Breakpoint for Tablet
+			@include breakpoint($tablet){
+				width:75%;
+				@include rem("padding", 0, 0, 0, 50);
+			}
+
+			// Breakpoint for Mobile
+			@include breakpoint($mobile){
+				width:100%;
+				padding:0;
+			}
+
+			h2{
+				position:relative;
+				@include rem("font-size", 24);
+				@include rem("line-height", 30);
+
+				// Breakpoint mobile
+				@include breakpoint($mobile){
+					@include rem("font-size", 18);
+					@include rem("line-height", 28);
+					@include rem("margin-bottom", 10);
+				}
+
+				a{
+					color:black;
+					text-decoration:none;
+				}
+				a:hover, a:focus{
+					color:$darkRed;
+				}
+				a.comments-num{
+					position:absolute;
+					@include rem("top", -5);
+					right:0;
+					@include rem("font-size", 16);
+					position:relative;
+					background:$crRed;
+					@include rem("padding", 4, 8);
+					@include rem("margin", 0, 0, 0, 10);
+					color:white;
+				}
+				a.comments-num:after{
+					content:"";
+					position:absolute;
+					@include arrow("left", $crRed, 5);
+					@include rem("left", -5);
+					@include rem("top", 8);
+				}
+				a.comments-num:hover, a.comments-num:focus{
+					background:$darkRed;
+				}
+				a.comments-num:hover:after, a.comments-num:focus:after{
+					@include arrow("left", $darkRed, 5);
+				}
+			}
+
+			p.date{
+				color:$lightGrey;
+				@include rem("margin-bottom", 10);
+
+				// Breakpoint mobile
+				@include breakpoint($mobile){
+					@include rem("font-size", 10);
+				}
+
+				a{
+					color:$lightGrey;
+				}
+			}
+		}
+
+		a.read-more{
+			position:absolute;
+			@include rem("bottom", 15);
+			@include rem("right", 10);
+			background:$crRed;
+			@include rem("padding", 5, 10);
+			color:white;
+			text-decoration:none;
+		}
+		a.read-more:hover, a.read-more:focus{
+			background:$darkRed;
+		}
+	}
+}

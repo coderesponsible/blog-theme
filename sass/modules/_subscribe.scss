@@ -1,0 +1,39 @@
+form#email-signup{
+	label{
+		@include hide-text();
+	}
+
+	input{
+		@include linearGradient(white, $reallyLightGrey);
+		border:1px solid $lightGrey;
+		@include rem("padding", 5, 10);
+		width:70%;
+		color:$darkGrey;
+	}
+
+	button{
+		position:relative;
+		background:$crRed;
+		color:white;
+		border:1px solid $crRed;
+		@include rem("padding", 5, 10);
+		@include rem("margin", 0, 0, 0, -5);
+	}
+
+	button:after{
+		content:"";
+		position:absolute;
+		@include rem("top", 4);
+		@include rem("left", -8);
+		@include arrow("left", $crRed, 8);
+	}
+
+	button:hover, button:focus{
+		background:$darkRed;
+		border:1px solid $darkRed;
+	}
+
+	button:hover:after, button:focus:after{
+		@include arrow("left", $darkRed, 8);
+	}
+}
