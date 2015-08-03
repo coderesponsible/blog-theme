@@ -26,21 +26,21 @@ header{
 			background:url(images/cr-logo.png) no-repeat;
 			@include retina("images/cr-logo-hd.png", 300, 122);
 			text-decoration:none;
-			@include rem("width", 300);
-			@include rem("height", 122);
+			width: 300px;
+			height: 122px;
 
 			// Breakpoint tablet
 			@include breakpoint($tablet){
-				@include rem("width", 200);
-				@include rem("height", 81);
-				@include rem("background-size", 200, 81);
+				width: 200px;
+				height: 81px;
+				background-size: 200px 81px;
 			}
 
 			// Breakpoint in-between
 			@include breakpoint($inbetween){
-				@include rem("width", 100);
-				@include rem("height", 41);
-				@include rem("background-size", 100, 41);
+				width: 100px;
+				height: 41px;
+				background-size: 100px 41px;
 			}
 		}
 	}
@@ -202,13 +202,13 @@ header{
 				@include rem("top", 20);
 				background:url(images/menu-icons.png) no-repeat;
 				@include retina("images/menu-icons-hd.png", 75, 43);
-				@include rem("width", 22);
-				@include rem("height", 22);
+				width: 22px;
+				height: 22px;
 			}
 		}
 		a#search-link{
 			span{
-				@include rem("background-position", 0, -22);
+				background-position: 0 -22px;
 			}
 			
 		}
