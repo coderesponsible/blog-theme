@@ -34,39 +34,6 @@ section.articles{
 			@include rem("padding", 0, 0, 60, 0);
 		}
 
-		a.article-cat{
-			position:absolute;
-			top:0;
-			left:0;
-			z-index:10;
-			@include rem("margin", 5, 0, 0, 0);
-			@include rem("padding", 5, 10);
-			background:$crRed;
-			color:white;
-			font-weight:bold;
-			text-decoration:none;
-
-			span.cat-tri{
-				border-top: 30px solid $crRed; 
-				border-right: 30px solid transparent;
-				position:absolute;
-				top:0;
-				@include rem("margin", 0, 0, 0, 10);
-			}
-
-			// Breakpoint for Mobile
-			@include breakpoint(600){
-				display:none;
-			}
-		}
-		a.article-cat:hover, a.article-cat:focus{
-			background:$darkRed;
-
-			span.cat-tri{
-				border-top: 30px solid $darkRed; 
-			}
-		}
-
 		img{
 			display:none;
 			

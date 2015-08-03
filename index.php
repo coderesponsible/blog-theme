@@ -5,7 +5,6 @@
 
 	<?php while (have_posts()) : the_post(); ?>
 		<article class="clearfix row">
-			<a href="<?php bloginfo('url'); ?>/category/<?php $category = get_the_category(); echo $category[0]->cat_name; ?>" class="article-cat"><?php $category = get_the_category(); echo $category[0]->cat_name; ?><span class="cat-tri"></span></a>
 			<a href="<?php the_permalink() ?>" class="col_3">
 				<?php echo first_thumnail(); ?>
 			</a>
