@@ -68,16 +68,14 @@ section.articles{
 		}
 
 		img{
-			@include rem("min-height", 180);
-			@include rem("min-width", 180);
-			width:100%;
-
+			display:none;
+			
 			// Breakpoint for Mobile
-			@include breakpoint($mobile){
-				display:none;
-				//width:80%;
-				//@include rem("min-height", 140);
-				//@include rem("min-width", 140);
+			@include min-breakpoint($mobile){
+				@include rem("min-height", 180);
+				@include rem("min-width", 180);
+				width:100%;
+				display: block;
 			}
 		}
 

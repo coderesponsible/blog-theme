@@ -20,7 +20,7 @@ header{
 
 		a{
 			display:block;
-			font-family:$webfont;
+			font-family:$helvetica;
 			@include rem("font-size", 32);
 			@include hide-text();
 			background:url(images/cr-logo.png) no-repeat;
