@@ -1,13 +1,5 @@
 <div id="sidebar" class="col_3">
 	<div class="split">
-		<h3>Newsletter Sign-up</h3>
-		<form id="email-signup" class="clearfix">
-			<fieldset>
-				<span class="error-message"></span>
-				<label for="email-address">Email:</label><input type="email" name="email" id="email-address">
-				<button class="email-submit">Submit</button>
-			</fieldset>
-		</form>
 		<ul class="block social-icons">
 			<li><a href="http://feeds.feedburner.com/CodeResponsible" class="rss"><span>RSS</span></a></li>
 			<li><a href="http://twitter.com/coderesponsible" class="twitter"><span>Twitter</span></a></li>
