@@ -5,3 +5,5 @@
 .sass-cache
 *.log
 node_modules/
+coderesponsible-old.js
+index.html

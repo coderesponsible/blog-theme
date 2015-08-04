@@ -72,15 +72,11 @@
     margin-left:0;
   }
 }
-/*@media only screen  and (max-width : 899px) {
-  .col_4{
-    width:100%;
-    margin-left:0;
-  }
+
+.show{
+  @extend %show;
 }
-@media only screen  and (max-width : 839px) {
-  .col_3{
-    width:100%;
-    margin-left:0;
-  }
-}*/
+
+.hide{
+  @extend %hide;
+}

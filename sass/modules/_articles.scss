@@ -39,8 +39,8 @@ section.articles{
 			
 			// Breakpoint for Mobile
 			@include min-breakpoint($mobile){
-				@include rem("min-height", 180);
-				@include rem("min-width", 180);
+				min-height: 180px;
+				min-width: 180px;
 				width:100%;
 				display: block;
 			}
