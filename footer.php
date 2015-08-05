@@ -24,9 +24,6 @@
 				</div>
 			</div>
 		</footer>
-		<div id="mask"></div>
-		<script src="<?php bloginfo('template_directory'); ?>/js/html5.js" type="text/javascript"></script>
-		<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js" type="text/javascript"></script>
-		<script src="<?php bloginfo('template_directory'); ?>/js/coderesponsible-min.js" type="text/javascript"></script>
+		<script src="<?php bloginfo('template_directory'); ?>/js/coderesponsible.min.js" type="text/javascript"></script>
 	</body>
 </html>
