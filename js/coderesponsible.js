@@ -22,13 +22,25 @@ window.onresize = (event) => {
 	}
 };
 
-let menuOpenCose = () => {
-	console.log('click')
+let searchOpenCose = () => {
 	if(searchform.offsetParent === null){
-		searchform.classList.add('open');
+		searchLink.className = searchLink.className.replace('hide', '');
+		searchform.classList.add('fadeIn');
 	}else{
-		searchform.classList.add('close');
+		searchform.className = searchform.className.replace('fadeIn', '');
 	}
 }
 
-searchLink.addEventListener('click', menuOpenCose);
+searchLink.addEventListener('click', searchOpenCose);
+
+
+let menuOpenCose = () => {	
+	if(mainNav.offsetParent === null){
+		menuLink.className = menuLink.className.replace('hide', '');
+		mainNav.classList.add('fadeIn');
+	}else{
+		mainNav.className = mainNav.className.replace('fadeIn', '');
+	}
+}
+
+menuLink.addEventListener('click', menuOpenCose);

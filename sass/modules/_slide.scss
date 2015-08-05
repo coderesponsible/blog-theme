@@ -1,0 +1,40 @@
+// File Name: _slide.scss
+// Description: Animate slide up and slide down
+// Used by: style.scss, 
+// Dependencies: 
+// Date created: 04/08/2015
+// ------------------------------------------------------------
+.fadeIn{
+  display: block !important;
+  // opacity: 0;
+  // -webkit-animation: fadeIn .3s ease; /* Safari 4+ */
+  // -moz-animation:    fadeIn .3s ease; /* Fx 5+ */
+  // -o-animation:      fadeIn .3s ease; /* Opera 12+ */
+  // animation:         fadeIn .3s ease; /* IE 10+, Fx 29+ */
+}
+
+.fadeOut{
+  display: none;
+  // -webkit-animation: fadeOut .3s ease; /* Safari 4+ */
+  // -moz-animation:    fadeOut .3s ease; /* Fx 5+ */
+  // -o-animation:      fadeOut .3s ease; /* Opera 12+ */
+  // animation:         fadeOut .3s ease; /* IE 10+, Fx 29+ */
+}
+
+// @-webkit-keyframes fadeIn {
+//   0% { 
+//     opacity: 0;
+//   } 
+//   100% {
+//     opacity: 1;
+//   }
+// }
+
+// @-webkit-keyframes fadeOut {
+//   0% {
+//     opacity: 1;
+//   } 
+//   100% {
+//     opacity: 0;
+//   }
+// }
