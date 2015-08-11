@@ -1,0 +1,23 @@
+// File Name: _tables.scss
+// Description: Style data tables used in articles
+// Used by: style.scss, 
+// Dependencies: 
+// Date created: 10/08/2015
+// ------------------------------------------------------------
+
+table{
+  border-collapse: collapse;
+
+  tr:nth-child(odd){
+    background: $reallyLightGrey;
+  }
+
+  td, th{
+    padding: 5px 10px;
+    border: 1px solid $lightGrey;
+
+    &:first-child{
+      width:250px;
+    }
+  }
+}
