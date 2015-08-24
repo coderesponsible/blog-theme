@@ -1,4 +1,4 @@
-ul.paging{
+.paging{
 	@include rem("margin", 0, 0, 20, 0);
 	float:right;
 	li{
@@ -14,7 +14,7 @@ ul.paging{
 			background:$darkRed;
 		}
 	}
-	li.current{
+	.current{
 		a{
 			background:$darkRed;
 			color:white;

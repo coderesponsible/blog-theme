@@ -1,4 +1,4 @@
-ul.recent-posts{
+.recent-posts{
 	li{
 		border-bottom:1px solid $lightGrey;
 
@@ -7,9 +7,10 @@ ul.recent-posts{
 			@include rem("padding", 10);
 			text-decoration:none;
 			color:black;
-		}
-		a:hover, a:focus{
-			background:$lightGrey;
+
+			&:hover, &:focus{
+				background:$lightGrey;
+			}
 		}
 	}
 	li:first-child{

@@ -38,30 +38,31 @@
 		@include rem("margin", 20, 0, 20, 0);
 	}
 
-	span.author-name{
+	.author-name{
 		@include rem("margin-top", 5);
 		a{
 			color:$darkGrey;
 			text-decoration:none;
 			font-weight:bold;
-		}
-		a:hover, a:focus{
-			color:$crRed;
+
+			&:hover, &:focus{
+				color:$crRed;
+			}
 		}
 	}
 
-	div.top-right{
+	.top-right{
 		p{
 			font-family:$helvetica;
 			@include rem("font-size", 14);
 		}
 	}
 
-	div.social-article{
+	.social-article{
 		float:right;
 	}
 
-	ul.article-items{
+	.article-items{
 		clear:both;
 		@include rem("margin", 30, 0);
 		list-style:none;
@@ -82,10 +83,10 @@
 			a{
 				text-decoration:none;
 				color:$darkGrey;
-			}
 
-			a:hover, a:focus{
-				color:$crRed;
+				&:hover, &:focus{
+					color:$crRed;
+				}
 			}
 
 			span{
@@ -104,18 +105,18 @@
 				}
 			}
 		}
-		li.date{
+		.date{
 			span{
 				@include rem("background-position", -55, 0);
 			}
 		}
-		li.category{
+		.category{
 			span{
 				@include rem("background-position", -27, 0);
 			}
 		}
-		li.category{
-			a:hover, focus{
+		.category{
+			a:hover, a:focus{
 				span{
 					@include rem("background-position", -27, -20);
 				}
@@ -127,7 +128,7 @@
 			}
 		}
 		li.comments{
-			a:hover, focus{
+			a:hover, a:focus{
 				span{
 					@include rem("background-position", 0, -20.99);
 				}
@@ -178,15 +179,16 @@
 			width:100% !important;
 			@include rem("margin-bottom", 30);
 		}
-		a.button{
+		.button{
 			color:white;
 			background:$crRed;
 			text-decoration:none;
 			@include rem("margin", 5, 10);
 			@include rem("padding", 10);
-		}
-		a.button:hover, a.button:focus{
-			background:$darkRed;
+
+			&:focus, &:hover{
+				background:$darkRed;
+			}
 		}
 	}
 }

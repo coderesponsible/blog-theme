@@ -46,21 +46,22 @@ header{
 	}
 
 	// Skip to content link
-	a.main-content-link{
+	.main-content-link{
 		@include hide-text();
 		position:absolute;
 		@include rem("top", 10);
 		@include rem("left", 180);
 		text-decoration:none;
-	}
-	a.main-content-link:focus{
-		text-indent:0;
-		background:$darkRed;
-		color:white;
-		@include rem("padding", 5);
+
+		&:focus{
+			text-indent:0;
+			background:$darkRed;
+			color:white;
+			@include rem("padding", 5);
+		}
 	}
 
-	form.search{
+	.search{
 		position:absolute;
 		@include rem("right", 10);
 		@include rem("bottom", 80);
@@ -112,6 +113,11 @@ header{
 			border:1px solid $crRed;
 			@include rem("padding", 5, 10);
 			@include rem("margin", 0, 0, 0, -5);
+
+			&:hover, &:focus{
+				background:$darkRed;
+				border:1px solid $darkRed;
+			}
 		}
 
 		button:after{
@@ -122,17 +128,12 @@ header{
 			@include arrow("left", $crRed, 8);
 		}
 
-		button:hover, button:focus{
-			background:$darkRed;
-			border:1px solid $darkRed;
-		}
-
 		button:hover:after, button:focus:after{
 			@include arrow("left", $darkRed, 8);
 		}
 	}
 
-	nav#main-nav{
+	#main-nav{
 		clear:both;
 		background:$crRed;
 		@include rem("margin-bottom", 20);
@@ -165,13 +166,14 @@ header{
 					@include rem("padding", 10, 20);
 					@include rem("letter-spacing", 1.5);
 
+					&:hover, &:focus{
+						background:$darkRed;
+					}
+
 					// Breakpoint in-between
 					@include breakpoint($inbetween){
 						display:block;
 					}
-				}
-				a:hover, a:focus{
-					background:$darkRed;
 				}
 			}
 
@@ -179,7 +181,7 @@ header{
 		}
 	}
 
-	nav#menu{
+	#menu{
 		display:none;
 		position:absolute;
 		top:0;
@@ -206,14 +208,14 @@ header{
 				height: 22px;
 			}
 		}
-		a#search-link{
+		#search-link{
 			span{
 				background-position: 0 -22px;
 			}
 			
 		}
 
-		a#menu-link{
+		#menu-link{
 			span{
 				background-position:0 0;
 			}

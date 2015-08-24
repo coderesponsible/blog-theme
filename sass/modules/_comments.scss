@@ -1,4 +1,4 @@
-div#respond{
+#respond{
 	@include rem("margin", 10);
 
 	h3{
@@ -6,7 +6,7 @@ div#respond{
 	}
 }
 
-form#commentform{
+#commentform{
 	@include breakpoint($tablet){
 		width:100%;
 		@include rem("margin-bottom", 30);
@@ -48,17 +48,18 @@ form#commentform{
 		background:$crRed;
 		color:white;
 
+		&:hover, &:focus{
+			background:$darkRed;
+		}
+
 		// Tablet Breakpoint
 		@include breakpoint($tablet){
 			width:40%;
 		}
 	}
-	button:hover, button:focus{
-		background:$darkRed;
-	}
 }
 // Comment list
-ul.commentlist{
+.commentlist{
 	list-style:none;
 	margin:0;
 	padding:0;
@@ -66,6 +67,10 @@ ul.commentlist{
 	li{
 		@include rem("padding", 10);
 		position:relative;
+
+		&:nth-child(odd) {
+		  background: $reallyLightGrey;
+		}
 
 		p{
 			@include rem("line-height", 18);
@@ -108,13 +113,11 @@ ul.commentlist{
 			a{
 				text-decoration:none;
 				color:$darkGrey;
-			}
-			a:hover, a:focus{
-				color:$crRed;
+
+				&:hover, &:focus{
+					color:$crRed;
+				}
 			}
 		}
-	}
-	li:nth-child(odd) {
-	   background: $reallyLightGrey;
 	}
 }

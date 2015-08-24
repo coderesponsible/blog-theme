@@ -52,7 +52,7 @@ footer{
 		}
 	}
 
-	ul.recent-posts{
+	.recent-posts{
 		li{
 			border-bottom:1px dotted white;
 
@@ -68,7 +68,7 @@ footer{
 		}
 	}
 
-	ul.social-icons{
+	.social-icons{
 		a:hover, a:focus{
 			background:$crRed;
 		}
