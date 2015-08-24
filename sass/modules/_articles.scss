@@ -82,30 +82,6 @@ section.articles{
 				a:hover, a:focus{
 					color:$darkRed;
 				}
-				a.comments-num{
-					position:absolute;
-					@include rem("top", -5);
-					right:0;
-					@include rem("font-size", 16);
-					position:relative;
-					background:$crRed;
-					@include rem("padding", 4, 8);
-					@include rem("margin", 0, 0, 0, 10);
-					color:white;
-				}
-				a.comments-num:after{
-					content:"";
-					position:absolute;
-					@include arrow("left", $crRed, 5);
-					@include rem("left", -5);
-					@include rem("top", 8);
-				}
-				a.comments-num:hover, a.comments-num:focus{
-					background:$darkRed;
-				}
-				a.comments-num:hover:after, a.comments-num:focus:after{
-					@include arrow("left", $darkRed, 5);
-				}
 			}
 
 			p.date{

@@ -9,7 +9,7 @@
 				<?php echo first_thumnail(); ?>
 			</a>
 			<div class="article-content col_9">
-				<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a><a href="<?php comments_link(); ?>" class="comments-num"><?php comments_number( '0', '1', '%' ); ?></a></h2>
+				<h2><a href="<?php the_permalink() ?>"><?php the_title(); ?></a></h2>
 				<?php /*<p class="date"><?php the_time('F jS, Y') ?> by <?php the_author_posts_link() ?></p>*/ ?>
 				<p><?php echo excerpt(35); ?></p>
 			</div>
