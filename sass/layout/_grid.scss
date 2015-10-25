@@ -4,6 +4,7 @@
   @include box-sizing(border-box);
 }
 .row{
+  @extend %clearfix;
 	@include rem("max-width", $maxWidth);
 	margin:0 auto;
 }

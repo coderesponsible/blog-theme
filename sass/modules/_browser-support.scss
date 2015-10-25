@@ -1,0 +1,54 @@
+// File Name: _browser-support.scss
+// Description: Style the list of supported browsers.
+// Used by: style.scss, 
+// Dependencies: 
+// Date created: 04/10/2015
+// ------------------------------------------------------------
+
+.browser-support{
+
+  li{
+    display: inline-block;
+    text-align: center;
+    margin-left: 20px;
+
+    &:first-child{
+      margin-left: 0;
+    }
+  }
+
+  .logo{
+    @extend %hideText;
+    display: block;
+    background: url(images/browser-logos.png) no-repeat;
+    @include retina("images/browser-logos.png", 250, 50);
+    width: 45px;
+    height: 50px;
+  }
+
+  .chrome{
+    background-position: -3px 0;
+  }
+
+  .firefox{
+    background-position: -54px 0;
+  }
+
+  .ie{
+    background-position: -103px 0;
+  }
+
+  .opera{
+    background-position: -155px 0;
+  }
+
+  .safari{
+    background-position: -204px 0;
+  }
+
+  .version{
+    display: block;
+    font-weight: bold;
+    @include rem("font-size", 14);
+  }
+}

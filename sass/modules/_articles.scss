@@ -22,7 +22,7 @@ section.articles{
 	}
 
 	article{
-		clear:both;
+		@extend %clearfix;
 		position:relative;
 		@include rem("padding", 0, 0, 20, 0);
 		@include rem("margin", 0, 0, 20, 0);

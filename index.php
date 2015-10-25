@@ -4,7 +4,7 @@
 	<?php if (have_posts()) : ?>
 
 	<?php while (have_posts()) : the_post(); ?>
-		<article class="clearfix row">
+		<article class="row">
 			<a href="<?php the_permalink() ?>" class="col_3">
 				<?php echo first_thumnail(); ?>
 			</a>

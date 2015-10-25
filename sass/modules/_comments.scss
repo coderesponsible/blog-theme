@@ -1,4 +1,5 @@
 #respond{
+	@extend %clearfix;
 	@include rem("margin", 10);
 
 	h3{

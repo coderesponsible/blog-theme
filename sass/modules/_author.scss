@@ -3,6 +3,7 @@
 	border-bottom:1px dotted $lightGrey;
 	@include rem("padding", 20, 0);
 	@include rem("margin", 20, 0);
+	@extend %clearfix;
 
 	.left{
 		float:left;
@@ -39,8 +40,9 @@
 	.right{
 		float:left;
 		@include rem("margin", 10);
-		width:80%;
-		@include rem("line-height", 16);
+		width:70%;
+		@include rem("line-height", 20);
+		@include rem("font-size", 14);
 
 		// Tablet Breakpoint
 		@include breakpoint($tablet){

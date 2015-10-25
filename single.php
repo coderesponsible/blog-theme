@@ -4,7 +4,7 @@
 
 	<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
-		<article class="clearfix">
+		<article>
 			<h1><?php the_title(); ?></h1>
 			<?php /*<span class="author-name">by <a href="<?php echo get_author_posts_url(get_the_author_meta( 'ID' )); ?>" class="author"><?php the_author() ?></a></span> */ ?>
 			<div class="social-article">
@@ -16,10 +16,10 @@
 				<li class="category"><a href="<?php bloginfo('url'); ?>/category/<?php $category = get_the_category(); echo $category[0]->cat_name; ?>"><span class="icon"></span><?php $category = get_the_category(); echo $category[0]->cat_name; ?></a></li>
 				<li class="comments"><a href="<?php comments_link(); ?>"><span class="icon"></span><?php comments_number( '0 Comments', '1 Comment', '% Comments' ); ?></a></li>
 			</ul>
-			<div class="content clearfix">
+			<div class="content">
 				<?php the_content('<p class="serif">Read the rest of this entry &raquo;</p>'); ?>
 			</div>
-			<div class="author clearfix">
+			<div class="author">
 				
 				<div class="left">
 
@@ -47,9 +47,9 @@
 			</div>
 
 		</article>
-		<div class="clearfix">
+		
 	<?php comments_template(); ?>
-	</div>
+
 	<?php endwhile; else: ?>
 
 		<p>Sorry, no posts matched your criteria.</p>
