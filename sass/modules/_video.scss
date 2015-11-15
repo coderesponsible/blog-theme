@@ -1,0 +1,12 @@
+// File Name: _video.scss
+// Description: Responsive youtube videos
+// Used by: style.scss, 
+// Dependencies: 
+// Date created: 15/11/2015
+// ------------------------------------------------------------
+
+iframe{
+  @include breakpoint(640){
+    width: 95%;
+  }
+}

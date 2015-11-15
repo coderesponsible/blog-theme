@@ -4,6 +4,8 @@
 *.tmp
 .sass-cache
 *.log
+*.css
+*.min.js
 node_modules/
 coderesponsible-old.js
 index.html
